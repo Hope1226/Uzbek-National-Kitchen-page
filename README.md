@@ -1,18 +1,23 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
 
-> One paragraph statement about the project.
+# Offical web page of the restaurant Uzbek National Kitchen
+
+> All you need to know about Uzbek kitchen
 
 ![screenshot](./app_screenshot.png)
 
-Additional description about the project and its features.
+This project is initiated and inspired within the curriculum of The Odin Project to demonstrate the usage of webpack and js modules
 
 ## Built With
 
 - Major languages
+ - Java Script
+ - HTML/CSS
 - Frameworks
+ - N/A
 - Technologies used
+ - Webpack
+ - SCSS
 
 ## Live Demo
 
@@ -43,17 +48,11 @@ To get a local copy up and running follow these simple example steps.
 
 ## Authors
 
-👤 **Author1**
+👤 ** Umidjon Ustabaev (Hope)**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
+- GitHub: [@hope1226](https://github.com/Hope1226)
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/umidjon-ustabaev-03b92b11a/)
 
 ## 🤝 Contributing
 
