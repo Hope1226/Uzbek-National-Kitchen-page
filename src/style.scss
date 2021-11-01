@@ -46,25 +46,24 @@ body {
   background: $main_bg url(./assets/images/hope-gb.jpg) no-repeat;
   background-size: cover;
   color: $main_cl;
-
+  height: 100vh;
 }
 
 .layer {
   background: linear-gradient(rgba(0, 0, 0, 0.2) 10%, rgba(0, 0, 0, 0.487) 40%, #000 100%);
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  height: inherit;
+  @include gridConst(1fr, 1fr)
+ 
 }
 
  .container {
-   width: 90%;
-   max-width: 900px;
-   margin: 0 auto;
-   padding: 20px 0;
+   padding-top: 10px;
+   @include gridConst( 1fr, auto 1fr, 0);
    .main-nav {
      @include gridConst(repeat(auto-fit, minmax(200px, 1fr)),1fr ,0 );
+     width: 90%;
+     max-width: 900px;
+     justify-self: center;
      a {
        padding: 10px 20px;
        border-right: $border;
@@ -78,50 +77,113 @@ body {
        color: wheat;
      }
    }
-   .homeCont {
-     @include gridConst(1fr, 1fr 1fr, 20px);
-     padding: 50px 0;
-     .headline {
-       padding: 100px 0;
-       @include flexConst(column, center, center);
-       .hero-text {
-         text-align: center;
-         background: rgba(0, 0, 0, 0.474);
-         mix-blend-mode: overlay;
-         font-size: $hero_size;
-       }
-       small {
-        font-size: $small_size;
-        align-self: flex-end;
-       }
-     }
-     .reservationForm {
-       width: 60%;
-       max-width: 100%;
-       @include gridConst(1fr, auto auto auto 1fr);
-       justify-self: center;
-       font-size: 500;
-       > * {
-         padding: 10px;
-         background: rgba(0, 0, 0, 0.672);
-         color: $main_cl;
-         border: none;
-         backdrop-filter: blur(8px);
-         border-radius: 5px;
-         color: rgb(65, 65, 65);
-         font-size: 16px;
-         color: #ff6f00;
-       }
-       label {
-        @include flexConst(row, space-between, stretch);
-        input {
-          background: transparent;
-          border: none;
-          color: #ff6f00;;
-
+   .content {
+      @include gridConst(1fr, 1fr, 0, stretch, stretch);
+      .homeCont {
+        width: 90%;
+        max-width: 900px;
+        justify-self: center;
+        @include gridConst(1fr, 1fr 1fr, 20px, center);
+        padding: 50px 0;
+        .headline {
+          @include flexConst(column, center, center);
+          .hero-text {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.474);
+            mix-blend-mode: overlay;
+            font-size: $hero_size;
+          }
+          small {
+            font-size: $small_size;
+            align-self: flex-end;
+          }
         }
-       }
-     }
-   }
+        .reservationForm {
+          width: 60%;
+          max-width: 100%;
+          @include gridConst(1fr, auto auto auto 1fr);
+          justify-self: center;
+          font-size: 500;
+          > * {
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.672);
+            color: $main_cl;
+            border: none;
+            backdrop-filter: blur(8px);
+            border-radius: 5px;
+            color: rgb(65, 65, 65);
+            font-size: 16px;
+            color: #ff6f00;
+          }
+          label {
+            @include flexConst(row, space-between, stretch);
+            input {
+              background: transparent;
+              border: none;
+              color: #ff6f00;;
+
+            }
+          }
+        }
+      }
+      .menu-container {
+        padding-top: 50px;
+        @include flexConst(row,  stretch, stretch);
+        justify-self: stretch;
+        overflow: hidden;
+        .list {
+          flex: 1;
+          @include flexConst(column);
+          transition:
+              font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+              flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+              background 0.2s;
+              padding: 30px;
+          >* {
+            flex: 1;
+            @include flexConst(column, center, flex-start);
+            transition: transform 1s;
+          }
+          >*:first-child {
+            transform: translateY( 50%);
+           }
+          >*:last-child {
+           transform: translateY(100%);
+          }
+        }
+        .list-0 {
+          background: url(./assets/images/menu-soup.jpg) no-repeat;
+          background-size: cover;
+        }
+        .list-1 {
+          background: url(./assets/images/menu-plov.jpg) no-repeat;
+          background-size: cover;
+        }
+        .list-2 {
+          background: url(./assets/images/menu-kebab.jpg) no-repeat;
+          background-size: cover;
+        }
+        .list-3 {
+          background: url(./assets/images/menu-tea.jpg) no-repeat;
+          background-size: cover;
+        }
+        .list-4 {
+          background: url(./assets/images/menu-bread.jpg) no-repeat;
+          background-size: cover;
+        }
+        .list.open-acive {
+          font-size: 30px;
+          flex: 5;
+          >*:first-child {
+            transform: translateY(40%);
+           }
+          >*:last-child {
+           transform: translateY(0);
+          }
+        }
+     
+      }
+
+    }
   }
 
