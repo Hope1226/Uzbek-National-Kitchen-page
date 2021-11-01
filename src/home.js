@@ -22,22 +22,20 @@ const createHome = (container) => {
   let inputEmail = document.createElement('input');
   inputEmail.type = "emial";
   inputEmail.placeholder = "Enter your email"
-  let labelFor = document.createElement('label');
-  labelFor.innerHTML = "Please enter the date of the reservation"
   let inputDate = document.createElement('input');
   inputDate.type = "date";
   inputDate.id = "date";
   let textArea = document.createElement('textarea');
-  textArea.innerHTML = 'Enter your message here';
+  textArea.placeholder = 'Enter your message here';
   let submitButton = document.createElement('button');
   submitButton.type = 'submit';
   submitButton.id = "submitBtn";
   submitButton.innerHTML = "Place the reservation";
-  labelFor.appendChild(inputDate);
+ 
 
   form.appendChild(inputName);
   form.appendChild(inputEmail);
-  form.appendChild(labelFor);
+  form.appendChild(inputDate);
   form.appendChild(textArea);
 
   homeCont.appendChild(headline);
